@@ -49,7 +49,33 @@ android {
     }
 }
 
+//Remember, the Gradle essentially helps assemble to tools we need to build the app and to help
+//build the application with those tools. These tools include these dependencies/libraries
+//we include in the Gradle file. This is why the Gradle runs before our app is shown as it is
+//helping us use the tools to build the app
+
+//These dependencies are essentially libraries online which functionality we wish to use in our
+//applications. There are many software engineers out there creating their own libraries to make
+//the lives of our developers easier, so that we don't have to write code for common features found
+//in applications
+
+//If we wish to use these dependencies in our Kotlin files, we need to use the import keyword within
+//them
 dependencies {
+
+    //Jetpack Compose ViewModel - provides the ViewModel class we can inherit from from our own
+    //ViewModel class
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+
+    //Network Call - allows us to make network calls to collect data from the internet, aka, the
+    //mealDB website we are using
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+    //Helps to convert JSON data response from our request to Kotlin objects we can use
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //Image loading - allows us to load the image we get back from the JSON data response
+    implementation("io.coil-kt:coil-compose:2.4.0")
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
