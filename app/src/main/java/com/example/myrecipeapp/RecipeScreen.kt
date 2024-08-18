@@ -43,7 +43,7 @@ fun RecipeScreen(
         when
         {
             viewState.loading -> {
-                CircularProgressIndicator(modifier.align(alignment = Alignment.Center))
+                CircularProgressIndicator(progress = 0.89f, modifier.align(Alignment.Center))
             }
             viewState.error != null ->
             {
