@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
 //Create the retrofit instance
-private val retrofit =  Retrofit.Builder().baseUrl("www.themealdb.com/api/json/v1/1/")//put in the base URL
+private val retrofit =  Retrofit.Builder().baseUrl("https://www.themealdb.com/api/json/v1/1/")//put in the base URL
     .addConverterFactory(GsonConverterFactory.create())//allows the conversion of JSON data to Kotlin data we can use
     .build()//build the instance
 
